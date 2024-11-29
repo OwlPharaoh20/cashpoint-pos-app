@@ -1,40 +1,29 @@
 // File: /src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import DashboardPage from './pages/DashboardPage';
 import ProductsPage from './pages/ProductsPage';
-import SalesPage from './pages/SalesPage'; // Importing Sales Page
-import InventoryPage from './pages/InventoryPage'; // Importing Inventory Page
-import CustomersPage from './pages/CustomersPage'; // Importing Customers Page
-import ReportsPage from './pages/ReportsPage'; // Importing Reports Page
+import SalesPage from './pages/SalesPage';
+import InventoryPage from './pages/InventoryPage';
+import CustomersPage from './pages/CustomersPage';
+import ReportsPage from './pages/ReportsPage';
 
-/**
- * App Component
- * Main application entry point with routing setup.
- */
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Dashboard Route */}
-        <Route path="/" element={<DashboardPage />} />
-
-        {/* Products Management Route */}
-        <Route path="/products" element={<ProductsPage />} />
-
-        {/* Sales Route */}
-        <Route path="/sales" element={<SalesPage />} />
-
-        {/* Inventory Route */}
-        <Route path="/inventory" element={<InventoryPage />} />
-
-        {/* Customers Route */}
-        <Route path="/customers" element={<CustomersPage />} />
-
-        {/* Reports Route */}
-        <Route path="/reports" element={<ReportsPage />} />
-      </Routes>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/sales" element={<SalesPage />} />
+          <Route path="/inventory" element={<InventoryPage />} />
+          <Route path="/customers" element={<CustomersPage />} />
+          <Route path="/reports" element={<ReportsPage />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 
