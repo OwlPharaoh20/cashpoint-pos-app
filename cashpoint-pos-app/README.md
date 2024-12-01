@@ -1,28 +1,25 @@
-# React + Vite
+# Cashpoint POS App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- View and manage products
+- Real-time analytics display
+- Add items to cart with notifications
 
-Currently, two official plugins are available:
+## Tech Stack
+- Frontend: React, Redux, TailwindCSS
+- Backend: Node.js, Express
+- State Management: Redux Toolkit
+- Notifications: React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deployment
+- Frontend deployed on [Vercel](https://vercel.com).
+- Backend runs locally on `http://localhost:5000`.
 
-Routes, Pages and components left to do 
+## Getting Started
+1. Clone the repo.
+2. Run `npm install` in both frontend and backend directories.
+3. Start backend: `npm start`.
+4. Start frontend: `npm run dev`.
 
-1. lOGIN-SIgnup page
-2. header section components,
-3.  More routes on app.jsx ; /sales, /inventory, /customers, /reports.
-////////
-
-Comments for Future Work:
-Login/Sign-Up Page
-
-Add backend integration to handle authentication.
-Use context or Redux for session management.
-Header Component
-
-Enhance with a user profile dropdown for logout and settings.
-Add a dark mode toggle if needed.
-New Routes
-
-Create separate components for /sales, /inventory, /customers, and /reports pages.
+## API
+- `GET /api/analytics`: Fetches analytics data.

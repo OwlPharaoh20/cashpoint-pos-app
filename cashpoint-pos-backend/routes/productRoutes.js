@@ -21,6 +21,7 @@ router.post(
   })
 );
 
+
 // Get all products
 router.get(
   "/",
